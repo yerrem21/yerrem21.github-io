@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Magang Dan Kegiatan Akhir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SIMAKAH</div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#magang">Magang</a></li>
+            <li><a href="#kegiatan-akhir">Kegiatan Akhir</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero">
+            <h1>Selamat Datang di Portal Magang Dan Kegiatan Akhir</h1>
+            <p>Sistem informasi terpadu untuk program magang dan kegiatan akhir mahasiswa</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="magang" class="section">
+            <h2>Program Magang</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Daftar Magang</h3>
+                    <p>Daftarkan diri Anda untuk program magang</p>
+                    <button onclick="bukaForm('magang')">Daftar Sekarang</button>
+                </div>
+                <div class="card">
+                    <h3>Status Magang</h3>
+                    <p>Cek status pendaftaran magang Anda</p>
+                    <button onclick="cekStatus('magang')">Cek Status</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="kegiatan-akhir" class="section">
+            <h2>Kegiatan Akhir</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Pendaftaran Kegiatan Akhir</h3>
+                    <p>Daftarkan kegiatan akhir Anda</p>
+                    <button onclick="bukaForm('kegiatan')">Daftar Sekarang</button>
+                </div>
+                <div class="card">
+                    <h3>Progress Kegiatan</h3>
+                    <p>Pantau progress kegiatan akhir Anda</p>
+                    <button onclick="cekProgress()">Lihat Progress</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <form id="pendaftaran-form">
+                    <div class="form-group">
+                        <label for="nim">NIM:</label>
+                        <input type="text" id="nim" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Kontak Kami</h3>
+                <p>Email: info@simakah.ac.id</p>
+                <p>Telepon: (+62) 1234567</p>
+                <p>Jln. Sisingamangaraja - Kel. Benpasi - Kec. Kota Kefamenanu - TIMOR TENGAH UTARA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
